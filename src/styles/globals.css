@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Color Tokens */
+  :root {
+    --color-primary-dark: #0E0F12;
+    --color-secondary-dark: #1A1C22;
+    --color-off-white: #F6F2EA;
+    --color-jade: #1F6F5B;
+    --color-jade-light: #2A8A72;
+    --color-chili: #A23A2E;
+    --color-border-dark: rgba(255, 255, 255, 0.08);
+    --color-border-light: rgba(14, 15, 18, 0.08);
+    --color-overlay: rgba(14, 15, 18, 0.7);
+  }
+
+  /* Typography */
+  @font-face {
+    font-family: 'Editorial';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cormorant Garamond'), local('EB Garamond');
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 3rem;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Mobile Typography Adjustments */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Utility Classes */
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--color-secondary-dark);
+  }
+
+  .bg-off-white {
+    background-color: var(--color-off-white);
+  }
+
+  .bg-jade {
+    background-color: var(--color-jade);
+  }
+
+  .bg-jade-light {
+    background-color: var(--color-jade-light);
+  }
+
+  .bg-chili {
+    background-color: var(--color-chili);
+  }
+
+  .text-jade {
+    color: var(--color-jade);
+  }
+
+  .text-jade-light {
+    color: var(--color-jade-light);
+  }
+
+  .text-chili {
+    color: var(--color-chili);
+  }
+
+  .text-off-white {
+    color: var(--color-off-white);
+  }
+
+  .border-dark {
+    border-color: var(--color-border-dark);
+  }
+
+  .border-light {
+    border-color: var(--color-border-light);
+  }
+
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus Styles */
+  *:focus-visible {
+    outline: 2px solid var(--color-jade);
+    outline-offset: 2px;
+  }
+
+  /* Transitions */
+  * {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-primary-dark);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-jade);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-jade-light);
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-jade);
+    color: white;
+  }
+}
